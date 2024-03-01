@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "FPSPortfolio",
+			"Path": "..\\Source\\FPSPortfolio.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "FPSPortfolioEditor",
+			"Path": "..\\Source\\FPSPortfolioEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
