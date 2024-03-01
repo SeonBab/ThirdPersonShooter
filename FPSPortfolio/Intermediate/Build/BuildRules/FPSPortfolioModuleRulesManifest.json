@@ -1,8 +1,0 @@
-{
-	"SourceFiles": [
-		"C:\\Git\\FPSPortfolio\\FPSPortfolio\\Source\\FPSPortfolio\\FPSPortfolio.Build.cs",
-		"C:\\Git\\FPSPortfolio\\FPSPortfolio\\Source\\FPSPortfolio.Target.cs",
-		"C:\\Git\\FPSPortfolio\\FPSPortfolio\\Source\\FPSPortfolioEditor.Target.cs"
-	],
-	"EngineVersion": "5.3.2"
-}
