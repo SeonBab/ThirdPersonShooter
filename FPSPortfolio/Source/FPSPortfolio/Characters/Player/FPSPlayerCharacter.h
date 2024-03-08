@@ -55,4 +55,8 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* FirstPersonCameraComponent;
+
+//Mesh
+	UPROPERTY(VisibleAnywhere)
+	USkeletalMeshComponent* FirstPersonSkeletalMeshComponent;
 };

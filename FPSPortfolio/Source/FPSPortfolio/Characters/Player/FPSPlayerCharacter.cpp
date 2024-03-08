@@ -12,11 +12,22 @@ AFPSPlayerCharacter::AFPSPlayerCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+	//Camera
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
 	FirstPersonCameraComponent->SetRelativeLocation(FVector(0.f, 0.f, 10.f + BaseEyeHeight));
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 
+	//FirstPersonSkeletalMesh
+	FirstPersonSkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonSkeletalMesh"));
+	FirstPersonSkeletalMeshComponent->SetupAttachment(FirstPersonCameraComponent);
+	FirstPersonSkeletalMeshComponent->SetOnlyOwnerSee(true);
+	FirstPersonSkeletalMeshComponent->SetCastShadow(false);
+	FirstPersonSkeletalMeshComponent->bCastDynamicShadow = false;
+
+	//WholeBodySkeletalMesh
+	GetMesh()->SetHiddenInGame(true);
+	GetMesh()->SetCastHiddenShadow(true);
 }
 
 void AFPSPlayerCharacter::BeginPlay()
