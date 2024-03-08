@@ -8,6 +8,7 @@
 
 class UInputMappingContext;
 class UInputAction;
+class UCameraComponent;
 
 struct FInputActionValue;
 
@@ -50,4 +51,8 @@ protected:
 public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+//Camera
+private:
+	UPROPERTY(VisibleAnywhere)
+	UCameraComponent* FirstPersonCameraComponent;
 };
