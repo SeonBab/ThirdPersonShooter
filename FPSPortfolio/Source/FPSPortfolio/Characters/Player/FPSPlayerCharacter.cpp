@@ -1,18 +1,18 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Player/PlayerCharacter.h"
+#include "FPSPlayerCharacter.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputMappingContext.h"
 #include "EnhancedInputComponent.h"
 
-APlayerCharacter::APlayerCharacter()
+AFPSPlayerCharacter::AFPSPlayerCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
 }
 
-void APlayerCharacter::BeginPlay()
+void AFPSPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
@@ -30,13 +30,13 @@ void APlayerCharacter::BeginPlay()
 
 }
 
-void APlayerCharacter::Tick(float DeltaTime)
+void AFPSPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
-void APlayerCharacter::Move(const FInputActionValue& Value)
+void AFPSPlayerCharacter::Move(const FInputActionValue& Value)
 {
 	FVector2D MovementVector = Value.Get<FVector2D>();
 
@@ -53,7 +53,7 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 	}
 }
 
-void APlayerCharacter::Look(const FInputActionValue& Value)
+void AFPSPlayerCharacter::Look(const FInputActionValue& Value)
 {
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
 
@@ -61,17 +61,17 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 	AddControllerPitchInput(LookAxisVector.Y);
 }
 
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AFPSPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		//Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AFPSPlayerCharacter::Move);
 
 		//Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AFPSPlayerCharacter::Look);
 
 		//Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);

@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "GlobalCharacter.generated.h"
+#include "BaseCharacter.generated.h"
 
 UCLASS()
-class FPSPORTFOLIO_API AGlobalCharacter : public ACharacter
+class FPSPORTFOLIO_API ABaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AGlobalCharacter();
+	ABaseCharacter();
 
 protected:
 	// Called when the game starts or when spawned

@@ -3,21 +3,22 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Global/GlobalCharacter.h"
-#include "PlayerCharacter.generated.h"
+#include "Characters/BaseCharacter.h"
+#include "FPSPlayerCharacter.generated.h"
 
 class UInputMappingContext;
 class UInputAction;
+
 struct FInputActionValue;
 
 UCLASS()
-class FPSPORTFOLIO_API APlayerCharacter : public AGlobalCharacter
+class FPSPORTFOLIO_API AFPSPlayerCharacter : public ABaseCharacter
 {
 	GENERATED_BODY()
 	
 public:
 	// Sets default values for this character's properties
-	APlayerCharacter();
+	AFPSPlayerCharacter();
 
 protected:
 	// Called when the game starts or when spawned
