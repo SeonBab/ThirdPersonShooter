@@ -2,6 +2,7 @@
 
 
 #include "BaseCharacter.h"
+#include "Weapon/Gun.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
