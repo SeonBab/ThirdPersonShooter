@@ -12,7 +12,7 @@
 USTRUCT(BlueprintType)
 struct FPSPORTFOLIO_API FGunData : public FTableRowBase
 {
-	GENERATED_BODY()
+	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Data")
 	USkeletalMesh* SkeletalMesh;
