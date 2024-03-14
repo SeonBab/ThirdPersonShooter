@@ -4,8 +4,15 @@
 #include "GlobalEnums.generated.h"
 
 UENUM(BlueprintType)
-enum class WeaponType : uint8
+enum class EWeaponType : uint8
 {
 	None,
 	MainWeapon,
+};
+
+UENUM(BlueprintType)
+enum class EUseTypeOfWeapon : uint8
+{
+	None,
+	Unarmed,
 };

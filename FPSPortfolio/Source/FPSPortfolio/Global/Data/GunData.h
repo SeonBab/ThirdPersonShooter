@@ -6,13 +6,16 @@
 #include "Engine/DataTable.h"
 #include "Engine/SkeletalMesh.h"
 #include "GunData.generated.h"
-/**
- * 
- */
+
+enum class EWeaponType;
+
 USTRUCT(BlueprintType)
 struct FPSPORTFOLIO_API FGunData : public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Data")
+	EWeaponType WeaponType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Data")
 	USkeletalMesh* SkeletalMesh;

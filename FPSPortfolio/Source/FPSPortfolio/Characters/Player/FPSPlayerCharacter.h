@@ -51,12 +51,12 @@ protected:
 public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-//Camera
 private:
+//Camera
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* FirstPersonCameraComponent;
 
 //Mesh
 	UPROPERTY(VisibleAnywhere)
-	USkeletalMeshComponent* FirstPersonSkeletalMeshComponent;
+	USkeletalMeshComponent* FirstPersonSkeletalMeshComponent;	
 };

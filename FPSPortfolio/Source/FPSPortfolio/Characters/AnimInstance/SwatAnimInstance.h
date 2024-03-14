@@ -6,9 +6,8 @@
 #include "Animation/AnimInstance.h"
 #include "SwatAnimInstance.generated.h"
 
-/**
- * 
- */
+enum class EUseTypeOfWeapon : uint8;
+
 UCLASS()
 class FPSPORTFOLIO_API USwatAnimInstance : public UAnimInstance
 {
@@ -17,4 +16,13 @@ class FPSPORTFOLIO_API USwatAnimInstance : public UAnimInstance
 public:
 	virtual void NativeInitializeAnimation() override;
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+
+private:
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"));
+	EUseTypeOfWeapon UseTypeOfWeapon;
+
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"));
+	float Speed;
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"));
+	float Angle;
 };
